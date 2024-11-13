@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(240, 239, 239);
+}
+
+.menu {
+    position: absolute;
+    background: tomato;
+    color: white;
+    height: 100vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .usuario {
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.menu-lateral {
+    width: 60px; /* Largura do menu contraído */
+    height: 100vh;
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s; /* Animação de expansão */
+    overflow: hidden;
+    position: fixed;
+}
+
+/* Menu expandido ao passar o mouse */
+.menu-lateral:hover {
+    width: 200px; /* Largura do menu expandido */
+}
+
+/* Estilos dos itens do menu */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+/* Ícone dos itens */
+.menu-item i {
+    font-size: 20px;
+    margin-right: 10px; /* Espaço entre ícone e texto */
+}
+
+/* Texto oculto quando o menu está contraído */
+.menu-item span {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Texto visível ao expandir o menu */
+.menu-lateral:hover .menu-item span {
+    opacity: 1;
+}
+
+/* Estilo ao passar o mouse nos itens */
+.menu-item:hover {
+    background-color: #414040;
+}
+
+.menu li {
+    font-size: 20px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: white;
+    color: tomato;
+}
+
+.menu li:active {
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+.container .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: tomato;
+    padding: 2vh 0;
+    text-align: center;
+}
+
+
+.container .header .nav .search input[type=text] {
+    border: none;
+    background: white;
+    padding: 5px 35px;
+}
+
+.container .header .nav .search input[type=text]:hover {
+    background: rgb(221, 221, 221);
+}
+
+.container .header .nav .search button[type=submit] {
+    border: none;
+    padding: 5px 6px;
+}
+
+.container .header .nav .search button[type=submit]:active {
+    background: black;
+    color: white;
+}
+
+.container .content .cards {
+    padding: 90px 5vw; /* Reduz o padding para centralizar mais os cards */
+    display: flex;
+    justify-content: center; /* Centraliza os cards no meio da página */
+    flex-wrap: wrap;
+    gap: 40px; /* Espaçamento uniforme entre os cards */
+}
+
+.container .content .cards .card {
+    width: 250px;
+    height: 150px;
+    background: white;
+    color: tomato;
+    border-radius: 4px;
+    margin: 10px -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.5px 1px black;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: tomato;
+}
+
+.container .content .cards .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container .content .cards .card h3, 
+.container .content .cards .card h2 {
+    margin-bottom: 10px;
+}
+
+.container .content .cards .card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.container .content .cards .card .btn {
+    background: tomato;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.container .content .cards .card .btn:hover {
+    background: rgb(248, 85, 57);
+}
+
+.container .content2 .disc, 
+.container .content2 .dp {
+    margin: 5px 290px;
+    width: 25vw;
+    height: 50vh;
+    background: white;
+    color: tomato;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5px 1px black;
+    text-align: center;
+}
+
+.container .content2 .dp {
+    margin-top: -334px;
+    margin-left: 732px;
+}
+
+* { box-sizing: border-box; }
+

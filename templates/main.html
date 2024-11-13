@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Way Print</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="icon" href="path/to/icon.png" type="image/png">
+</head>
+<body>
+  
+
+</head>
+<body>
+
+    <!-- Menu Lateral -->
+    <div class="menu-lateral">
+       
+        <a href="#" class="menu-item">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-user"></i>
+            <span>Etiquetas</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+        </a>
+    </div>
+
+
+
+    <div class="container">
+   
+        <header class="header">
+            <nav class="nav">
+                <div class="search">
+                    <label for="search-box" class="visually-hidden"></label>
+                    <input type="text" id="search-box" placeholder="Pesquisar...">
+                    <button type="submit" aria-label="Ir">Ir</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Conteúdo Central -->
+        <main class="content">
+            <section class="cards">
+                <!-- Novo Produto Card -->
+                <a href="{{ url_for('adicionar_produto') }}" class="card">
+                    <div class="box">
+                        <h2>Adicionar Produto</h2>
+                        <p>Adicione produtos para monitorar validade e criar etiquetas</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="card">
+                    <div class="box">
+                        <h2>Etiquetas</h2>
+                        <p>Imprima etiquetas para organizar e identificar seus itens facilmente.</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="card">
+                    <div class="box">
+                        <h2>Vencimentos</h2>
+                        <p>Verifique os próximos vencimentos de seus produtos</p>
+                    </div>
+                </a>
+
+                <a href="#" class="card">
+                    <div class="box">
+                        <h2>Suporte</h2>
+                        <p>Contate-nos caso precise de alguma ajuda</p>
+                    </div>
+                </a>
+            </section>
+        </main>
+
+
+</head>
+</body>
+</html>
