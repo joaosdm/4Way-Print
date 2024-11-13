@@ -1,22 +1,55 @@
-<<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4Way Print</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="icon" href="path/to/icon.png" type="image/png">
+    <title>Gerador de Etiquetas Personalizadas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Adicionar Produto</h1>
-    <form method="POST">
-        <label for="nome">Nome do Produto:</label>
-        <input type="text" id="nome" name="nome" required>
-        
-        <label for="validade">Validade:</label>
-        <input type="date" id="validade" name="validade" required>
-        
-        <button type="submit">Adicionar</button>
-    </form>
+    <div class="container">
+        <h1>Gerador de Etiquetas Personalizadas</h1>
+
+        <div class="controls">
+            <!-- Seleção de produto -->
+            <label for="produtos">Escolha o Produto:</label>
+            <select id="produtos">
+                <option value="">Selecione um produto</option>
+                <!-- Produtos serão adicionados dinamicamente -->
+            </select>
+
+            <!-- Campos que serão preenchidos automaticamente -->
+            <label for="data-fabricacao">Data de Fabricação:</label>
+            <input type="text" id="data-fabricacao" disabled>
+
+            <label for="data-validade">Data de Validade:</label>
+            <input type="text" id="data-validade" disabled>
+
+            <label for="lote">Lote:</label>
+            <input type="text" id="lote" placeholder="Exemplo: Lote 12345">
+
+            <label for="impresso-por">Impresso por:</label>
+            <input type="text" id="impresso-por" placeholder="Seu nome ou empresa">
+
+            <label for="logo">Carregar Logotipo:</label>
+            <input type="file" id="logo" accept="image/*">
+
+            <button id="download-btn">Baixar Etiqueta</button>
+        </div>
+
+        <div class="preview">
+            <h2>Pré-visualização da Etiqueta</h2>
+            <div id="label-container" class="label-container">
+                <div id="label" class="label">
+                    <div id="label-text">
+                        <!-- Conteúdo da etiqueta será atualizado aqui -->
+                    </div>
+                    <img id="label-logo" src="" alt="Logotipo" style="display:none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
