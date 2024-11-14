@@ -5,10 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "firefox",
+            "name": "Python Debugger: Flask",
+            "type": "debugpy",
             "request": "launch",
-            "name": "Open main.html",
-            "file": "/home/joaosdm/Documentos/4Way Solution/4Way Print/templates/main.html"
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app.py",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true,
+            "autoStartBrowser": false
         }
-    ]
-}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Etiquetas Personalizadas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/label.css') }}">
 </head>
 <body>
     <div class="container">
@@ -44,12 +44,13 @@
                     <div id="label-text">
                         <!-- Conteúdo da etiqueta será atualizado aqui -->
                     </div>
-                    <img id="label-logo" src="" alt="Logotipo" style="display:none;">
+                        <img id="label-logo" src="" alt="Logotipo" style="display:none;">
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Importando o JavaScript no final do body -->
+    <script src="{{ url_for('static', filename='JS/script.js') }}"></script>
 </body>
 </html>
