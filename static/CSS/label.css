@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -47,42 +48,67 @@ input, select, button {
 }
 
 .label-container {
-    display: inline-block;
-    border-radius: 10px;
-    background-color: #e6e6e6;
-    margin-top: 20px;
-    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
 }
 
 .label {
-    padding: 20px;
+    width: 260px;
     font-size: 14px;
-    font-family: Arial, sans-serif;
     color: #000;
     text-align: left;
 }
 
-.label img {
-    max-width: 100px;
-    margin-top: 20px;
+#label-header h1 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 4px;
 }
 
-/* Tamanhos específicos para cada modelo de etiqueta */
-.etiqueta-produto {
-    width: 80mm;
-    height: 40mm;
+#label-header span {
+    font-size: 0.9rem;
+    color: #666;
 }
 
-.etiqueta-embalagem {
-    width: 100mm;
-    height: 35mm;
+.label-dates p {
+    font-size: 0.9rem;
+    margin: 4px 0;
+    color: #333;
+    font-weight: bold;
 }
 
-.etiqueta-venda {
-    width: 50mm;
-    height: 90mm;
+.label-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
 }
 
-#label-text {
-    margin-bottom: 20px;
+.responsavel p {
+    font-size: 0.8rem;
+    margin: 2px 0;
+    color: #444;
+}
+
+.qr-code img {
+    width: 60px;
+    height: 60px;
+}
+
+.lote {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: bold;
 }

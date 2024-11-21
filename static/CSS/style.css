@@ -209,3 +209,54 @@ body {
 
 * { box-sizing: border-box; }
 
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Layout flexível */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+}
+
+.card {
+    background-color: #FFEBE5; /* Cor de fundo clara */
+    border: 2px solid #FF4500; /* Bordas */
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333; /* Cor do texto */
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.card .box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card .box p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+ /*responsavidade*/
+@media (max-width: 768px) {
+    .menu-lateral {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-page .content {
+        margin-left: 0;
+    }
+
+    .label-page .container {
+        width: 100%;
+    }
+}
+*/
